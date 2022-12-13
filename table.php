@@ -10,6 +10,9 @@
 
 <head>
 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -248,6 +251,7 @@
                                             <th>Cin</th>
                                             <th>Email</th>
                                             <th>Date</th>
+                                            <th>Action</th>
                                            
                                         </tr>
                                     </thead>
@@ -281,6 +285,20 @@
                                     <?php echo $ligne['create_datetime']?>
                                 </center>
                             </td>
+                            <td>
+
+<center>
+    <a href="modifierClient.php?idclient=<?php echo $ligne['idclient']?>">
+       
+   <button class="w3-button w3-cyan">Update</button>
+     </a> &nbsp; &nbsp;
+     <a onclick="return confirm('vous êtes sûr ?')" href="supMess.php?id=<?php echo $ligne['idclient']?>">
+       
+     <button class="w3-button w3-red">Delete</button>
+    </a>
+</center>
+
+</td>
                            
                         </tr>
                         <?php } ?>

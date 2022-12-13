@@ -9,6 +9,7 @@
 <html lang="en">
 
 <head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -247,6 +248,7 @@
                                             <th>Num</th>
                                             <th>Type de Reclamation</th>
                                             <th>message</th>
+                                            <th>Action</th>
                                            
                                         </tr>
                                     </thead>
@@ -280,6 +282,21 @@
                                     <?php echo $ligne['msgcont']?>
                                 </center>
                             </td>
+
+                            <td>
+
+<center>
+    <a href="modifierClient.php?idclient=<?php echo $ligne['idclient']?>">
+       
+   <button class="w3-button w3-cyan">Update</button>
+     </a> &nbsp; &nbsp;
+     <a onclick="return confirm('vous êtes sûr ?')" href="supMess.php?id=<?php echo $ligne['id']?>">
+       
+     <button class="w3-button w3-red">Delete</button>
+    </a>
+</center>
+
+</td>
                            
                         </tr>
                         <?php } ?>
